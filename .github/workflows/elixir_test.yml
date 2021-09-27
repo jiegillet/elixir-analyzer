@@ -10,13 +10,11 @@ jobs:
       image: hexpm/elixir:1.12.1-erlang-24.0.1-ubuntu-focal-20210325
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          submodules: true
+      - uses: actions/checkout@v1
 
-      - name: Update Elixir Submodule
+      - name: Pull Elixir Submodule
         run: |
+          git submodule init
           git pull --recurse-submodules
           git submodule update --remote --recursive
         
