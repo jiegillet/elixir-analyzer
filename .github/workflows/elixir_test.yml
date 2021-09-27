@@ -10,7 +10,10 @@ jobs:
       image: hexpm/elixir:1.12.1-erlang-24.0.1-ubuntu-focal-20210325
 
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+      with:
+        submodules: true
 
       - name: Update Elixir Submodule
         run: |
