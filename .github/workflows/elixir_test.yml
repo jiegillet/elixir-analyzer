@@ -9,6 +9,10 @@ jobs:
     container:
       image: hexpm/elixir:1.12.1-erlang-24.0.1-ubuntu-focal-20210325
 
+    defaults:
+      run:
+        shell: bash
+        
     steps:
       - uses: actions/checkout@v1
 
