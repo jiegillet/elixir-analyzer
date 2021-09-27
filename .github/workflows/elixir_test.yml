@@ -9,16 +9,8 @@ jobs:
     container:
       image: hexpm/elixir:1.12.1-erlang-24.0.1-ubuntu-focal-20210325
 
-    defaults:
-      run:
-        shell: bash
-        
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Pull Elixir Submodule
-        run: git submodule update --init --recursive
-        
+      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: |
           mix local.rebar --force
