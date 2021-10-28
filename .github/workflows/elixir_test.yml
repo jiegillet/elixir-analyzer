@@ -12,7 +12,6 @@ jobs:
     steps:
       - name: Install git
         run: |
-          apt-get update
           apt-get install -y git
 
       - name: Checkout repository and submodules
