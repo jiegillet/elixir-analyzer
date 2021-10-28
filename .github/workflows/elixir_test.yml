@@ -11,9 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository and submodules
-        uses: actions/checkout@v1
-        with:
-          submodules: true
+        uses: actions/checkout@v2
 
       - name: Install Dependencies
         run: |
